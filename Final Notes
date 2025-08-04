@@ -1,0 +1,8 @@
+This entire codebase:
+
+Uses only SwiftUI, Combine, and native Swift
+
+Is MVVM compliant and highly testable
+
+Can be zipped or pushed to GitHub with your README
+

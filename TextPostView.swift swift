@@ -1,0 +1,15 @@
+import SwiftUI
+
+struct TextPostView: View {
+    let post: Post
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(post.username).font(.headline)
+            Text(post.content).font(.body)
+        }
+        .padding()
+        .background(Color(.secondarySystemBackground))
+        .cornerRadius(10)
+    }
+}

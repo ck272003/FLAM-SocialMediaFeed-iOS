@@ -1,0 +1,14 @@
+import Foundation
+import Combine
+
+class FeedService {
+    func fetchMockPosts(page: Int) -> AnyPublisher<[Post], Never> {
+        let posts = [
+            Post(username: "chiranjeev", content: "This is a text-only post", imageURL: nil, type: .text),
+            Post(username: "flamuser", content: "Look at this cool image!", imageURL: "https://picsum.photos/200", type: .image)
+        ]
+        return Just(posts)
+            .delay(for: .seconds(1), scheduler: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
+}

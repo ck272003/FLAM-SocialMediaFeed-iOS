@@ -1,0 +1,14 @@
+import Foundation
+
+enum PostType {
+    case text
+    case image
+}
+
+struct Post: Identifiable {
+    let id = UUID()
+    let username: String
+    let content: String
+    let imageURL: String?
+    let type: PostType
+}

@@ -1,0 +1,13 @@
+SocialMediaFeed/
+├── Models/
+│   └── Post.swift
+├── ViewModels/
+│   └── FeedViewModel.swift
+├── Views/
+│   └── FeedView.swift
+├── Components/
+│   ├── TextPostView.swift
+│   └── ImagePostView.swift
+├── Networking/
+│   └── FeedService.swift
+└── SocialMediaFeedApp.swift

@@ -1,0 +1,34 @@
+import Foundation
+import Combine
+
+class FeedViewModel: ObservableObject {
+    @Published var posts: [Post] = []
+    @Published var isLoading = false
+
+    private let service = FeedService()
+    private var cancellables = Set<AnyCancellable>()
+    private var currentPage = 1
+
+    init() {
+        fetchPosts()
+    }
+
+    func fetchPosts() {
+        guard !isLoading else { return }
+        isLoading = true
+
+        service.fetchMockPosts(page: currentPage)
+            .sink { [weak self] newPosts in
+                self?.posts.append(contentsOf: newPosts)
+                self?.currentPage += 1
+                self?.isLoading = false
+            }
+            .store(in: &cancellables)
+    }
+
+    func refreshFeed() {
+        currentPage = 1
+        posts = []
+        fetchPosts()
+    }
+}

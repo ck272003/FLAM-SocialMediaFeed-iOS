@@ -1,0 +1,8 @@
+No third-party frameworks or libraries are used
+
+ViewModel is decoupled and fully testable
+
+Supports adding new feed item types with minimal effort
+
+Simulated network latency to resemble real-world API usage
+

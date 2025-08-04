@@ -1,0 +1,7 @@
+ MVVM Architecture	Clear separation of Model, View, and ViewModel
+ Pull-to-Refresh	Users can pull down to reload feed using Combine triggers
+ Infinite Scrolling	Automatically loads more content when reaching bottom of feed
+ Modular Feed UI	Supports multiple feed types (text, image, video preview)
+ Reactive Updates	Live data updates with Combine
+ Pluggable Cell System	Easy to extend with new feed item types
+ Dynamic Height	Content-aware cell resizing for flexible layouts

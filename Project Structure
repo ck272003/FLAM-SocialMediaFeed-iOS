@@ -1,0 +1,8 @@
+SocialMediaFeed/
+├── Models/               # Post model with text, image, video fields
+├── ViewModels/           # FeedViewModel using Combine
+├── Views/                # Main feed view and UI components
+├── Components/           # Reusable UI cells (TextPostView, ImagePostView, etc.)
+├── Networking/           # Mock network services and feed loader
+├── Resources/            # Assets and sample data
+└── SocialMediaFeedApp.swift

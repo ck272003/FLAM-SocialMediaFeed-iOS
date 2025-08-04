@@ -1,0 +1,10 @@
+Open the app to view the simulated feed
+
+Pull down to refresh the feed
+
+Scroll to the bottom to trigger infinite loading
+
+Observe dynamic layout based on content type
+
+Reactively update UI as new posts are loaded
+

@@ -1,0 +1,24 @@
+import SwiftUI
+
+struct ImagePostView: View {
+    let post: Post
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(post.username).font(.headline)
+            if let imageURL = post.imageURL, let url = URL(string: imageURL) {
+                AsyncImage(url: url) { image in
+                    image.resizable().scaledToFill()
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(height: 200)
+                .clipped()
+            }
+            Text(post.content).font(.body)
+        }
+        .padding()
+        .background(Color(.secondarySystemBackground))
+        .cornerRadius(10)
+    }
+}
